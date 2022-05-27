@@ -1,0 +1,15 @@
+movie_directory.api_config:
+  path: '/admin/config/api-config'
+  defaults:
+    _form: '\Drupal\movie_directory\Form\TMDBApiForm'
+    _title: 'API Configurations'
+  requirements:
+    _permission: 'access content'
+
+movie_directory.listing:
+  path: '/movie-listing'
+  defaults:
+    _controller: '\Drupal\movie_directory\Controller\MovieDirectoryController::listing'
+    _title: 'Movie Listing'
+  requirements:
+    _permission: 'access content'
