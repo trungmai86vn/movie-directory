@@ -28,7 +28,7 @@ class TMDBApiForm extends FormBase {
                 '#title' => $this->t('TMDB Base API Key (v3)'),
                 '#description' => $this->t('TMDB Base API Key (v3)'),
                 '#required' => true,
-                '#default_value' => $values['api_key'] ?? ''
+                '#default_value' => $values['api_key'] ?? '' 
             ],
             'actions' => [
                 '#type' => 'actions',
