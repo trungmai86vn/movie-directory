@@ -3,7 +3,22 @@
 </div>
 
 <div class='content'>
-    {{ content.name }}
+    Current page: {{ content.data.page }}
+    <br/>
+    Total pages: {{ content.data.total_pages }}
+    <br/>
+    Total matches: {{ content.data.total_results }}
+    <br/>
+    Results:
+    <ul id='movies-list'>
+    {% for movie in content.data.results %}
+        <li>
+            <img src="{{ content.movie_poster_image_endpoint }}/{{ movie.poster_path }}" />
+            <br/>
+            {{ movie.title}}
+        </li>
+    {% endfor %}
+    </ul>
 </div>
 
 <div class='pagination'>

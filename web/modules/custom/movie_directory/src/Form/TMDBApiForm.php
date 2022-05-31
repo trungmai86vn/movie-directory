@@ -16,12 +16,12 @@ class TMDBApiForm extends FormBase {
         $values = \Drupal::state()->get(self::MOVIE_API_CONFIG_PAGE);
 
         $form = [
-            'api_base_url' => [
+            'api_base_uri' => [
                 '#type' => 'textfield',
                 '#title' => $this->t('TMDB Base API URL'),
                 '#description' => $this->t('TMDB Base API URL'),
                 '#required' => true,
-                '#default_value' => $values['api_base_url'] ?? ''
+                '#default_value' => $values['api_base_uri'] ?? ''
             ],
             'api_key' => [
                 '#type' => 'textfield',
